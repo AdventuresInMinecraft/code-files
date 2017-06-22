@@ -26,32 +26,31 @@ mcdrawing = minecraftstuff.MinecraftDrawing(mc)
 
 #pyramid variables
 #the midde of the pyramid will be the position of the player
-pyramidMiddle = mc.player.getTilePos()
+middle = mc.player.getTilePos()
 
-PYRAMID_RADIUS = 20
-PYRAMID_HEIGHT = 10
-PYRAMID_SIDES = 4
+RADIUS = 20
+HEIGHT = 10
+SIDES = 4
 
 #loop through the number of sides, each side will become a triangle
-for side in range(0,PYRAMID_SIDES): 
+for side in range(0,SIDES): 
     #find the first point of the triangle
-    point1Angle = int(round((360 / PYRAMID_SIDES) * side,0))
-    point1X, point1Z = findPointOnCircle(pyramidMiddle.x, pyramidMiddle.z,
-                                         PYRAMID_RADIUS, point1Angle)
+    point1Angle = int(round((360 / SIDES) * side,0))
+    point1X, point1Z = findPointOnCircle(middle.x, middle.z,
+                                         RADIUS, point1Angle)
 
     #find the second point of the triangle
-    point2Angle = int(round((360 / PYRAMID_SIDES) * (side + 1),0))
-    point2X, point2Z = findPointOnCircle(pyramidMiddle.x, pyramidMiddle.z,
-                                         PYRAMID_RADIUS, point2Angle)
+    point2Angle = int(round((360 / SIDES) * (side + 1),0))
+    point2X, point2Z = findPointOnCircle(middle.x, middle.z,
+                                         RADIUS, point2Angle)
 
     #draw the triangle
     # create the triangle points
-    trianglePoints = []
-    trianglePoints.append(minecraft.Vec3(point1X, pyramidMiddle.y, point1Z))
-    trianglePoints.append(minecraft.Vec3(point2X, pyramidMiddle.y, point2Z))
-    trianglePoints.append(minecraft.Vec3(pyramidMiddle.x,
-                                         pyramidMiddle.y + PYRAMID_HEIGHT,
-                                         pyramidMiddle.z))
+    points = minecraftstuff.Points()
+    points.add(point1X, middle.y, point1Z)
+    points.add(point2X, middle.y, point2Z)
+    points.add(middle.x, middle.y + HEIGHT, middle.z)
+    
     # draw the triangle
-    mcdrawing.drawFace(trianglePoints, True, block.SANDSTONE.id)
+    mcdrawing.drawFace(points, True, block.SANDSTONE.id)
 

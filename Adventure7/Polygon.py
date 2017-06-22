@@ -20,42 +20,42 @@ pos = mc.player.getTilePos()
 
 #draw 2d shapes
 # draw a triangle
-points = []
-points.append(minecraft.Vec3(pos.x, pos.y, pos.z))
-points.append(minecraft.Vec3(pos.x + 20, pos.y, pos.z))
-points.append(minecraft.Vec3(pos.x + 10, pos.y + 20, pos.z))
+points = minecraftstuff.Points()
+points.add(pos.x, pos.y, pos.z)
+points.add(pos.x + 20, pos.y, pos.z)
+points.add(pos.x + 10, pos.y + 20, pos.z)
 mcdrawing.drawFace(points, True, block.WOOL.id, 6)
 
 #move the position on a bit
 pos.x = pos.x + 25
 
 #draw a square
-points = []
-points.append(minecraft.Vec3(pos.x, pos.y, pos.z))
-points.append(minecraft.Vec3(pos.x + 20, pos.y, pos.z))
-points.append(minecraft.Vec3(pos.x + 20, pos.y + 20, pos.z))
-points.append(minecraft.Vec3(pos.x, pos.y + 20, pos.z))
+points = minecraftstuff.Points()
+points.add(pos.x, pos.y, pos.z)
+points.add(pos.x + 20, pos.y, pos.z)
+points.add(pos.x + 20, pos.y + 20, pos.z)
+points.add(pos.x, pos.y + 20, pos.z)
 mcdrawing.drawFace(points, False, block.WOOL.id, 7)
 
 #move the position on a bit
 pos.x = pos.x + 25
 
 #4 sided odd shape
-points = []
-points.append(minecraft.Vec3(pos.x, pos.y, pos.z))
-points.append(minecraft.Vec3(pos.x + 15, pos.y, pos.z))
-points.append(minecraft.Vec3(pos.x + 20, pos.y + 15, pos.z))
-points.append(minecraft.Vec3(pos.x, pos.y + 20, pos.z))
+points = minecraftstuff.Points()
+points.add(pos.x, pos.y, pos.z)
+points.add(pos.x + 15, pos.y, pos.z)
+points.add(pos.x + 20, pos.y + 15, pos.z)
+points.add(pos.x, pos.y + 20, pos.z)
 mcdrawing.drawFace(points, True, block.WOOL.id, 8)
 
 #move the position on a bit
 pos.x = pos.x + 25
 
 #5 sided odd shape
-points = []
-points.append(minecraft.Vec3(pos.x, pos.y, pos.z))
-points.append(minecraft.Vec3(pos.x + 20, pos.y + 5, pos.z))
-points.append(minecraft.Vec3(pos.x + 15, pos.y + 20, pos.z))
-points.append(minecraft.Vec3(pos.x + 5, pos.y + 15, pos.z))
-points.append(minecraft.Vec3(pos.x, pos.y + 5, pos.z))
+points = minecraftstuff.Points()
+points.add(pos.x, pos.y, pos.z)
+points.add(pos.x + 20, pos.y + 5, pos.z)
+points.add(pos.x + 15, pos.y + 20, pos.z)
+points.add(pos.x + 5, pos.y + 15, pos.z)
+points.add(pos.x, pos.y + 5, pos.z)
 mcdrawing.drawFace(points, False, block.WOOL.id, 9)

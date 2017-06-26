@@ -12,22 +12,22 @@ import time
 #create minecraft and minecraftdrawing objects
 mc = minecraft.Minecraft.create()
 
-#create the shape for our flying saucer
-horseBlocks = [minecraftstuff.ShapeBlock(0,0,0,block.WOOD_PLANKS.id),
-               minecraftstuff.ShapeBlock(-1,0,0,block.WOOD_PLANKS.id),
-               minecraftstuff.ShapeBlock(1,0,0,block.WOOD_PLANKS.id),
-               minecraftstuff.ShapeBlock(-1,-1,0,block.WOOD_PLANKS.id),
-               minecraftstuff.ShapeBlock(1,-1,0,block.WOOD_PLANKS.id),
-               minecraftstuff.ShapeBlock(1,1,0,block.WOOD_PLANKS.id),
-               minecraftstuff.ShapeBlock(2,1,0,block.WOOD_PLANKS.id)]
-
 #set the horses position
 horsePos = mc.player.getTilePos()
 horsePos.z = horsePos.z + 1
 horsePos.y = horsePos.y + 1
 
 #create the horseShape
-horseShape = minecraftstuff.MinecraftShape(mc, horsePos, horseBlocks)
+horseShape = minecraftstuff.MinecraftShape(mc, horsePos)
+
+#create the wooden horse by setting blocks
+horseShape.setBlock(0,0,0,block.WOOD_PLANKS.id)
+horseShape.setBlock(-1,0,0,block.WOOD_PLANKS.id)
+horseShape.setBlock(1,0,0,block.WOOD_PLANKS.id)
+horseShape.setBlock(-1,-1,0,block.WOOD_PLANKS.id)
+horseShape.setBlock(1,-1,0,block.WOOD_PLANKS.id)
+horseShape.setBlock(1,1,0,block.WOOD_PLANKS.id)
+horseShape.setBlock(2,1,0,block.WOOD_PLANKS.id)
 
 #make the horse move
 for count in range(1,10):

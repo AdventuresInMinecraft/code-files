@@ -36,15 +36,14 @@ alienPos.y = alienPos.y + 50
 #set the flying saucer's mode
 mode = "landing"
 
-#create the shape for our flying saucer
-alienBlocks = [minecraftstuff.ShapeBlock(-1,0,0,block.WOOL.id, 5),
-               minecraftstuff.ShapeBlock(0,0,-1,block.WOOL.id, 5),
-               minecraftstuff.ShapeBlock(1,0,0,block.WOOL.id, 5),
-               minecraftstuff.ShapeBlock(0,0,1,block.WOOL.id, 5),
-               minecraftstuff.ShapeBlock(0,-1,0,block.GLOWSTONE_BLOCK.id),
-               minecraftstuff.ShapeBlock(0,1,0,block.GLOWSTONE_BLOCK.id)]
+alienShape = minecraftstuff.MinecraftShape(mc, alienPos)
 
-alienShape = minecraftstuff.MinecraftShape(mc, alienPos, alienBlocks)
+alienShape.setBlock(-1,0,0,block.WOOL.id, 5)
+alienShape.setBlock(0,0,-1,block.WOOL.id, 5)
+alienShape.setBlock(1,0,0,block.WOOL.id, 5)
+alienShape.setBlock(0,0,1,block.WOOL.id, 5)
+alienShape.setBlock(0,-1,0,block.GLOWSTONE_BLOCK.id)
+alienShape.setBlock(0,1,0,block.GLOWSTONE_BLOCK.id)
 
 #loop
 while mode != "missionaccomplished":
@@ -75,7 +74,8 @@ while mode != "missionaccomplished":
             time.sleep(2)
 
             #send the player back to the original position
-            mc.player.setTilePos(playerPos.x, playerPos.y, playerPos.z)
+            mc.player.setTilePos(
+                playerPos.x, playerPos.y, playerPos.z)
 
             #clear the room
             mc.setBlocks(0,50,0,6,56,6,block.AIR.id)
@@ -89,16 +89,20 @@ while mode != "missionaccomplished":
 
     #move the flying saucer towards its target
     if alienPos != alienTarget:
+        
         #get the blocks in between block friend and player, by 'drawing' an imaginary line
-        blocksBetween = mcdrawing.getLine(alienPos.x, alienPos.y, alienPos.z,
+        line = mcdrawing.getLine(alienPos.x, alienPos.y, alienPos.z,
                                           alienTarget.x, alienTarget.y, alienTarget.z)
+
         #loop through the blocks in between the alien and the target
-        for blockBetween in blocksBetween:
+        for nextBlock in line:
             #move the block friend to the next block
             # move the alien shape to the new position
-            alienShape.move(blockBetween.x, blockBetween.y, blockBetween.z)
+            alienShape.move(nextBlock.x, nextBlock.y, nextBlock.z)
+            
             # time to sleep between each block move
             time.sleep(0.25)
+            
         # we have reached our target, so set the target to be friend's position
         alienPos = alienTarget.clone()
 

@@ -77,16 +77,16 @@ while True:
     #move block to the target
     if friend != target:
         #get the blocks in between block friend and player, by 'drawing' an imaginary line
-        blocksBetween = mcdrawing.getLine(friend.x, friend.y, friend.z,
-                                          target.x, target.y, target.z)
+        line = mcdrawing.getLine(friend.x, friend.y, friend.z,
+                                 target.x, target.y, target.z)
         #loop through the blocks in between the friend and the target
         # loop to the last but 1 block (:-1) otherwise the friend will be sitting on top of the player
-        for blockBetween in blocksBetween[:-1]:
+        for nextBlock in line[:-1]:
             #move the block friend to the next block
             # clear the old block by making it air
             mc.setBlock(friend.x, friend.y, friend.z, block.AIR.id)
             # set the position of the block friend to be the next block in-line
-            friend = blockBetween.clone()
+            friend = nextBlock.clone()
             # get the height of the land at the new position
             friend.y = mc.getHeight(friend.x, friend.z)
             # draw the block friend in the new position 

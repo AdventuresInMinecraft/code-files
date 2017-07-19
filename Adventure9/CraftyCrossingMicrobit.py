@@ -1,4 +1,4 @@
-# Adventure 9: CraftyCrossing.py
+# Adventure 9: CraftyCrossingMicrobit.py
 
 # From the book: "Adventures in Minecraft"
 # written by David Whale and Martin O'Hanlon, Wiley, 2014
@@ -11,6 +11,10 @@ import mcpi.minecraftstuff as minecraftstuff
 import time
 import random
 import threading
+
+#microbit - start
+import microbit
+#microbit - end
 
 #arena constants
 ARENAX = 10
@@ -187,12 +191,27 @@ TIMEOUTS = [30,25,20]
 level = 0
 points = 0
 
+#microbit - start
+#wait for the button to be pressed
+microbit.display.show(microbit.Image.CLOCK5)
+
+mc.postToChat("Press button A to start")
+#microbit.display.scroll("A to start")
+while not microbit.button_a.was_pressed():
+    time.sleep(0.1)
+#microbit - end
+
 #game loop, while not game over
 while not gameOver:
     #create the diamonds
     createDiamonds(arenaPos, DIAMONDS[level])
     diamondsLeft = DIAMONDS[level]
-    
+
+    #microbit - start
+    #wait for the button to be pressed
+    microbit.display.show(diamondsLeft)
+    #microbit - end
+
     #position the player at the start of the arena
     mc.player.setPos(arenaPos.x + 1, arenaPos.y + 1, arenaPos.z + 1)
 
@@ -214,7 +233,7 @@ while not gameOver:
                 #turn the block to AIR
                 mc.setBlock(hit.pos.x,hit.pos.y, hit.pos.z, block.AIR.id)
                 #reduce the diamonds to collect by 1
-                diamondsLeft = diamondsLeft - 1
+                diamondsLeft = diamondsLeft - 1               
 
         #get the players position
         pos = mc.player.getTilePos()
@@ -230,7 +249,20 @@ while not gameOver:
 
         #has the time expired
         secondsLeft = TIMEOUTS[level] - (time.time() - start)
+
+        #microbit - start
+        if int(secondsLeft) > 5:
+            microbit.display.show(diamondsLeft)
+        else:
+            microbit.display.show(
+                microbit.Image.ALL_CLOCKS[int(secondsLeft)])
+        #microbit - end
+            
         if secondsLeft < 0:
+            #microbit - start
+            #microbit.display.show(
+            #    microbit.Image.CLOCK12)
+            #microbit - end
             gameOver = True
             mc.postToChat("Out of time...")
 

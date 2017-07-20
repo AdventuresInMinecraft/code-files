@@ -193,10 +193,8 @@ points = 0
 
 #microbit - start
 #wait for the button to be pressed
-microbit.display.show(microbit.Image.CLOCK5)
-
 mc.postToChat("Press button A to start")
-#microbit.display.scroll("A to start")
+microbit.display.scroll("A to start")
 while not microbit.button_a.was_pressed():
     time.sleep(0.1)
 #microbit - end
@@ -251,11 +249,11 @@ while not gameOver:
         secondsLeft = TIMEOUTS[level] - (time.time() - start)
 
         #microbit - start
-        if int(secondsLeft) > 5:
-            microbit.display.show(diamondsLeft)
-        else:
+        if int(secondsLeft) < 6:
             microbit.display.show(
                 microbit.Image.ALL_CLOCKS[int(secondsLeft)])
+        else:
+            microbit.display.show(diamondsLeft)
         #microbit - end
             
         if secondsLeft < 0:

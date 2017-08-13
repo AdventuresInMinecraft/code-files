@@ -53,7 +53,7 @@ while True:
         #where is the player?  Are they near enough to me or should I move to them?
         if distance < TOO_FAR_AWAY:
             target = pos.clone()
-        if distance >= TOO_FAR_AWAY:
+        else:
             blockMood = "sad"
             mc.postToChat("<block> Come back. You are too far away. I need a hug!")
         

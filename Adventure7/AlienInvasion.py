@@ -21,7 +21,7 @@ def distanceBetweenPoints(point1, point2):
 #constants
 # will go here!
 HOVER_HEIGHT = 15
-ALIEN_TAUNTS = ["<aliens>You cant run forever",
+ALIEN_TAUNTS = ["<aliens>You cannot run forever",
                 "<aliens>Resistance is useless",
                 "<aliens>We only want to be friends"]
 
@@ -52,7 +52,7 @@ while mode != "missionaccomplished":
 
     # if its landing, set target to be above players head
     if mode == "landing":
-        mc.postToChat("<aliens> We dont come in peace - please panic")
+        mc.postToChat("<aliens> We do not come in peace - please panic")
         alienTarget = playerPos.clone()
         alienTarget.y = alienTarget.y + HOVER_HEIGHT
         mode = "attack"

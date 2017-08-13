@@ -66,7 +66,7 @@ while True:
             mc.postToChat("<block> Awww thanks. Lets go.")
         if random.randint(1,100) == 100:
             blockMood = "hadenough"
-            mc.postToChat("<block> That's it. I have had enough.")
+            mc.postToChat("<block> Thats it. I have had enough.")
 
     #Challenge
     #elif blockMood == "hadenough":

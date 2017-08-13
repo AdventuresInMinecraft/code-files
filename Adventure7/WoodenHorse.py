@@ -30,7 +30,7 @@ horseShape.setBlock(1,1,0,block.WOOD_PLANKS.id)
 horseShape.setBlock(2,1,0,block.WOOD_PLANKS.id)
 
 #make the horse move
-for count in range(1,10):
+for count in range(0,10):
     time.sleep(1)
     horseShape.moveBy(1,0,0)
 

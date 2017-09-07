@@ -1,8 +1,8 @@
-# Adventure 6: print3D.py
+# Adventure 5: print3D.py
 
-# From the book: "Adventures in Minecraft"
-# written by David Whale and Martin O'Hanlon, Wiley, 2014
-# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
+# From the book: "Adventures in Minecraft", 2nd Edition
+# written by David Whale and Martin O'Hanlon, Wiley, 2017
+# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
 #
 # This program reads from a CSV file and builds blocks in the
 # Minecraft world.

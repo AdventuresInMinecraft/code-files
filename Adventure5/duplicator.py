@@ -1,8 +1,8 @@
-# Adventure 6: duplicator.py
+# Adventure 5: duplicator.py
 
-# From the book: "Adventures in Minecraft"
-# written by David Whale and Martin O'Hanlon, Wiley, 2014
-# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
+# From the book: "Adventures in Minecraft", 2nd Edition
+# written by David Whale and Martin O'Hanlon, Wiley, 2017
+# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
 #
 # This program builds a huge 3D duplicating machine.
 # The machine can be used to scan and to print 3D objects all around
@@ -193,7 +193,7 @@ def menu():
     print(" 7. DEMOLISH the duplicator room")
     print(" 8. QUIT")
   
-    choice = int(raw_input("please choose: "))
+    choice = int(input("please choose: "))
     if choice < 1 or choice > 8:
       print("Sorry, please choose a number between 1 and 8")
     else:
@@ -221,14 +221,14 @@ while anotherGo:
     
   elif choice == 3: # SCAN
     # Ask the user for a file to scan into
-    filename = raw_input("filename?")
+    filename = input("filename?")
     
     # Scan from the duplicator room into the file
     scan3D(filename, roomx+1, roomy+1, roomz+1)
     
   elif choice == 4: # LOAD
     # Ask the user for a file to load from
-    filename = raw_input("filename?")
+    filename = input("filename?")
     
     # Load the file into the duplicator room
     print3D(filename, roomx+1, roomy+1, roomz+1)

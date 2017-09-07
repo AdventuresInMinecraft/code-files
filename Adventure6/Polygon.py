@@ -1,8 +1,8 @@
-# Adventure 7: Polygon.py
+# Adventure 6: Polygon.py
 
-# From the book: "Adventures in Minecraft"
-# written by David Whale and Martin O'Hanlon, Wiley, 2014
-# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
+# From the book: "Adventures in Minecraft", 2nd Edition
+# written by David Whale and Martin O'Hanlon, Wiley, 2017
+# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
 
 import mcpi.minecraft as minecraft
 import mcpi.block as block

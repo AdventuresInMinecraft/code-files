@@ -1,8 +1,9 @@
-# Adventure 8: RandomNumberIf.py
+# Adventure 7: RandomNumberIf.py
 
-# From the book: "Adventures in Minecraft"
-# written by David Whale and Martin O'Hanlon, Wiley, 2014
-# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
+# From the book: "Adventures in Minecraft", 2nd Edition
+# written by David Whale and Martin O'Hanlon, Wiley, 2017
+# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
+
 import random
 if random.randint(1,10) == 10:
     print("This happens about 1 time in 10")

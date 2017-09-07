@@ -1,8 +1,8 @@
-# Adventure 6: csvBuild.py
+# Adventure 5: csvBuild.py
 
-# From the book: "Adventures in Minecraft"
-# written by David Whale and Martin O'Hanlon, Wiley, 2014
-# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
+# From the book: "Adventures in Minecraft", 2nd Edition
+# written by David Whale and Martin O'Hanlon, Wiley, 2017
+# http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
 #
 # This program builds mazes in the Minecraft world.
 # The maze data is stored in a CSV file.

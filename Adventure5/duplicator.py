@@ -45,11 +45,11 @@ def buildRoom(x, y, z):
   
   # Build the duplicator room out of glass
   mc.setBlocks(roomx, roomy, roomz, 
-    roomx+SIZEX+2, roomy+SIZEY+2, roomz+SIZEZ+2, block.GLASS.id)
+    roomx+SIZEX+1, roomy+SIZEY+1, roomz+SIZEZ+1, block.GLASS.id)
     
   # Carve the insides and front face out with air
   mc.setBlocks(roomx+1, roomy+1, roomz, 
-    roomx+SIZEX+1, roomy+SIZEY+1, roomz+SIZEZ+1, block.AIR.id)    
+    roomx+SIZEX, roomy+SIZEY, roomz+SIZEZ, block.AIR.id)
 
 
 # Define a function that demolishes the room
@@ -58,14 +58,14 @@ def demolishRoom():
   # Note how the roomx, roomy and roomz are used to remember
   # where the room was built in the first place
   mc.setBlocks(roomx, roomy, roomz, 
-    roomx+SIZEX+2, roomy+SIZEY+2, roomz+SIZEZ+2, block.AIR.id)
+    roomx+SIZEX+1, roomy+SIZEY+1, roomz+SIZEZ+1, block.AIR.id)
 
 
 # Define a function to clean just the contents of the room
 def cleanRoom():
   # Set the whole inside area to AIR
   mc.setBlocks(roomx+1, roomy+1, roomz+1, 
-    roomx+SIZEX+1, roomy+SIZEY+1, roomz+SIZEZ+1, block.AIR.id)
+    roomx+SIZEX, roomy+SIZEY, roomz+SIZEZ, block.AIR.id)
   
   
 # Define a function that lists all CSV files

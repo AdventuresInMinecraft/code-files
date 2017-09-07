@@ -60,6 +60,6 @@ while True:
     if inField>3:
         mc.postToChat("Too slow!")
         # ...catapult player outside of the field
-        mc.player.setPos(HOME_X, HOME_Y, HOME_Z)
+        mc.player.setPos(HOME_X, pos.y+HOME_Y, HOME_Z)
 
 # END

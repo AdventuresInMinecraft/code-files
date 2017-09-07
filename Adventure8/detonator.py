@@ -3,6 +3,9 @@
 # From the book: "Adventures in Minecraft", 2nd Edition
 # written by David Whale and Martin O'Hanlon, Wiley, 2017
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
+#
+# This program sets off an explosion when you touch a banana connected to your micro:bit
+# NOTE: You can also use an orange, if you don't have a banana handy
 
 # Import necessary modules
 import microbit

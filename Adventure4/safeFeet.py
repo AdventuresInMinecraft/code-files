@@ -22,7 +22,7 @@ def safeFeet():
   pos = mc.player.getTilePos()
   
   # Get the block directly below your player
-  b = mc.getBlock(pos.x, pos.y-1, pos.z)
+  b = mc.getBlock(pos.x, pos.y-1, pos.z) # note: pos.y-1 is important!
 
   # Is the player safe?
   if b == block.AIR.id or b == block.WATER_STATIONARY.id or b == block.WATER_FLOWING.id:

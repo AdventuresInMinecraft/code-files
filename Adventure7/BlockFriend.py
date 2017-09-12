@@ -3,6 +3,10 @@
 # From the book: "Adventures in Minecraft", 2nd Edition
 # written by David Whale and Martin O'Hanlon, Wiley, 2017
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
+#
+# This program will create a block friend who will follow you around and
+# generally be quite annoying!
+
 
 import mcpi.minecraft as minecraft
 import mcpi.block as block

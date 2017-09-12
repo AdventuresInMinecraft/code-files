@@ -3,6 +3,10 @@
 # From the book: "Adventures in Minecraft"
 # written by David Whale and Martin O'Hanlon, Wiley, 2014
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
+#
+# This program is a full mini game inside Minecraft called "crafty crossing"
+# where you have to get to the otherside of an arena while avoiding abstracles
+# and collecting diamonds.
 
 #import modules
 import mcpi.minecraft as minecraft

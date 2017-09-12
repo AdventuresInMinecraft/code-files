@@ -50,16 +50,19 @@ while True:
     #apply the rules to work out where the block should be doing next
     # am I happy?
     if blockMood == "happy":
-        #where is the player?  Are they near enough to me or should I move to them?
+        #where is the player?  Are they near enough to me or should I
+        # move to them?
         if distance < TOO_FAR_AWAY:
             target = pos.clone()
         else:
             blockMood = "sad"
-            mc.postToChat("<block> Come back. You are too far away. I need a hug!")
+            mc.postToChat(
+                "<block> Come back. You are too far away. I need a hug!")
         
     # am I sad?
     elif blockMood == "sad":
-        #if Im sad, I'll wait for my friend to come close and give me a hug before I'm happy again
+        #if Im sad, I'll wait for my friend to come close and give me a hug
+        # before I'm happy again
         #print distance
         if distance <= 1:
             blockMood = "happy"
@@ -76,11 +79,13 @@ while True:
 
     #move block to the target
     if friend != target:
-        #get the blocks in between block friend and player, by 'drawing' an imaginary line
+        #get the blocks in between block friend and player, by 'drawing'
+        # an imaginary line
         line = mcdrawing.getLine(friend.x, friend.y, friend.z,
                                  target.x, target.y, target.z)
         #loop through the blocks in between the friend and the target
-        # loop to the last but 1 block (:-1) otherwise the friend will be sitting on top of the player
+        # loop to the last but 1 block (:-1) otherwise the friend will be 
+        #  sitting on top of the player
         for nextBlock in line[:-1]:
             #move the block friend to the next block
             # clear the old block by making it air

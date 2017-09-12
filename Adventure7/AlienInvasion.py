@@ -90,9 +90,10 @@ while mode != "missionaccomplished":
     #move the flying saucer towards its target
     if alienPos != alienTarget:
         
-        #get the blocks in between block friend and player, by 'drawing' an imaginary line
+        #get the blocks in between block friend and player, 
+        # by 'drawing' an imaginary line
         line = mcdrawing.getLine(alienPos.x, alienPos.y, alienPos.z,
-                                          alienTarget.x, alienTarget.y, alienTarget.z)
+                                 alienTarget.x, alienTarget.y, alienTarget.z)
 
         #loop through the blocks in between the alien and the target
         for nextBlock in line:

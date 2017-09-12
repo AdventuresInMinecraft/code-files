@@ -19,9 +19,15 @@ mcdrawing = minecraftstuff.MinecraftDrawing(mc)
 pos = mc.player.getTilePos()
 
 #draw 3 lines
-mcdrawing.drawLine(pos.x, pos.y, pos.z, pos.x, pos.y+20, pos.z, block.WOOL.id,1)
-mcdrawing.drawLine(pos.x, pos.y, pos.z, pos.x+20, pos.y, pos.z, block.WOOL.id,2)
-mcdrawing.drawLine(pos.x, pos.y, pos.z, pos.x + 20, pos.y + 20, pos.z, block.WOOL.id, 3)
+mcdrawing.drawLine(pos.x, pos.y, pos.z, 
+                   pos.x, pos.y+20, pos.z, 
+                   block.WOOL.id,1)
+mcdrawing.drawLine(pos.x, pos.y, pos.z, 
+                   pos.x+20, pos.y, pos.z, 
+                   block.WOOL.id,2)
+mcdrawing.drawLine(pos.x, pos.y, pos.z, 
+                   pos.x + 20, pos.y + 20, pos.z, 
+                   block.WOOL.id, 3)
 
 #sleep so the player can move to a different position
 time.sleep(5)

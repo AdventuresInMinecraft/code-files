@@ -68,15 +68,25 @@ def theRiver(arenaPos, riverZPos):
     BRIDGEWIDTH = 2
 
     #create the river
-    mc.setBlocks(arenaPos.x, arenaPos.y - 2, arenaPos.z + riverZPos,
-                 arenaPos.x + ARENAX, arenaPos.y, arenaPos.z + riverZPos + RIVERWIDTH - 1,
+    mc.setBlocks(arenaPos.x, 
+                 arenaPos.y - 2, 
+                 arenaPos.z + riverZPos,
+                 arenaPos.x + ARENAX, 
+                 arenaPos.y, 
+                 arenaPos.z + riverZPos + RIVERWIDTH - 1,
                  block.AIR.id)
     #fill with water
-    mc.setBlocks(arenaPos.x, arenaPos.y - 2, arenaPos.z + riverZPos,
-                 arenaPos.x + ARENAX, arenaPos.y - 2, arenaPos.z + riverZPos + RIVERWIDTH - 1,
+    mc.setBlocks(arenaPos.x, 
+                 arenaPos.y - 2, 
+                 arenaPos.z + riverZPos,
+                 arenaPos.x + ARENAX, 
+                 arenaPos.y - 2, 
+                 arenaPos.z + riverZPos + RIVERWIDTH - 1,
                  block.WATER.id)
     #create the bridge shape
-    bridgePos = minecraft.Vec3(arenaPos.x, arenaPos.y, arenaPos.z + riverZPos + 1)
+    bridgePos = minecraft.Vec3(arenaPos.x, 
+                               arenaPos.y, 
+                               arenaPos.z + riverZPos + 1)
     bridgeShape = minecraftstuff.MinecraftShape(mc, bridgePos)
 
     bridgeShape.setBlocks(
@@ -104,12 +114,15 @@ def theHoles(arenaPos, holesZPos):
     HOLESWIDTH = 3
     
     while not gameOver:
-        #create random holes which open up for a few seconds, close, then change to a different set of holes
+        #create random holes which open up for a few seconds, close,
+        # then change to a different set of holes
         holes = []
         #find some random holes
         for count in range(0,HOLES):
-            x = random.randint(arenaPos.x, arenaPos.x + ARENAX)
-            z = random.randint(arenaPos.z + holesZPos, arenaPos.z + holesZPos + HOLESWIDTH)
+            x = random.randint(arenaPos.x, 
+                               arenaPos.x + ARENAX)
+            z = random.randint(arenaPos.z + holesZPos, 
+                               arenaPos.z + holesZPos + HOLESWIDTH)
             holes.append(minecraft.Vec3(x, arenaPos.y, z))
         #turn the holes black before opening them up
         for hole in holes:

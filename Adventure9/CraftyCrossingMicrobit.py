@@ -5,7 +5,7 @@
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
 #
 # This program is a full mini game inside Minecraft called "crafty crossing"
-# where you have to get to the otherside of an arena while avoiding obstacles
+# where you have to get to the other side of an arena while avoiding obstacles
 # and collecting diamonds. The micro:bit is also used to display how many 
 # diamonds are left to collect and when time is running out.
 

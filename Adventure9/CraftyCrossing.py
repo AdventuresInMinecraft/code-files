@@ -5,7 +5,7 @@
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html
 #
 # This program is a full mini game inside Minecraft called "crafty crossing"
-# where you have to get to the otherside of an arena while avoiding abstacles
+# where you have to get to the otherside of an arena while avoiding obstacles
 # and collecting diamonds.
 
 #import modules

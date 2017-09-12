@@ -22,7 +22,8 @@ def buildBridge():
   # Get the block directly below your player
   b = mc.getBlock(pos.x, pos.y-1, pos.z)
   # Is the player unsafe?
-  if b == block.AIR.id or b == block.WATER_FLOWING.id or b==block.WATER_STATIONARY.id:
+  if b == block.AIR.id or b == block.WATER_FLOWING.id or \
+    b==block.WATER_STATIONARY.id:
     # If unsafe, build a glass block directly under the player
     mc.setBlock(pos.x, pos.y-1, pos.z, block.GLASS.id)
 

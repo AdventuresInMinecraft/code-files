@@ -4,7 +4,8 @@
 # written by David Whale and Martin O'Hanlon, Wiley, 2017
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
 #
-# This program displays a house icon on your micro:bit display when you arrive home
+# This program displays a house icon on your micro:bit display
+# when you arrive home
 
 # Import necesssary modules
 import microbit

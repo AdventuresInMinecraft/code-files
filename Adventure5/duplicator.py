@@ -118,7 +118,7 @@ def scan3D(filename, originx, originy, originz):
           # 'line' is not empty, so you must need a comma, so add it          
           line = line + ","
           
-        # Add the block id of this block to the end of 'line' variable          
+        # Add block id of this block to the end of 'line' variable
         line = line + str(blockid)
         
       # Note the indention. This is part of the 'for x' loop

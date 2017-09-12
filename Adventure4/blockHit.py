@@ -21,7 +21,8 @@ diamond_pos = mc.player.getTilePos()
 diamond_pos.x = diamond_pos.x + 1
 
 # Build a diamond treasure block
-mc.setBlock(diamond_pos.x, diamond_pos.y, diamond_pos.z, block.DIAMOND_BLOCK.id)
+mc.setBlock(diamond_pos.x, diamond_pos.y, diamond_pos.z,
+            block.DIAMOND_BLOCK.id)
 
 # Define a function that checks if the diamond treasure has been hit
 # You can reuse this function in other programs
@@ -35,7 +36,8 @@ def checkHit():
     pos = e.pos
     
     # If the diamond was hit
-    if pos.x == diamond_pos.x and pos.y == diamond_pos.y and pos.z == diamond_pos.z:     
+    if pos.x == diamond_pos.x and pos.y == diamond_pos.y and \
+      pos.z == diamond_pos.z:
       mc.postToChat("HIT")
 
 # Game loop

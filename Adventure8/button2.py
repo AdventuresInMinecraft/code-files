@@ -4,7 +4,8 @@
 # written by David Whale and Martin O'Hanlon, Wiley, 2017
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
 #
-# This program shows how to write to your micro:bit display when you press a button
+# This program shows how to write to your micro:bit display
+# when you press a button
 
 # Import necessary modules
 import time

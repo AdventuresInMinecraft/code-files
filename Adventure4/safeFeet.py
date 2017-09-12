@@ -25,7 +25,8 @@ def safeFeet():
   b = mc.getBlock(pos.x, pos.y-1, pos.z) # note: pos.y-1 is important!
 
   # Is the player safe?
-  if b == block.AIR.id or b == block.WATER_STATIONARY.id or b == block.WATER_FLOWING.id:
+  if b == block.AIR.id or b == block.WATER_STATIONARY.id or \
+    b == block.WATER_FLOWING.id:
     mc.postToChat("not safe")
   else:
     mc.postToChat("safe")

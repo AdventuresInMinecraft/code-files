@@ -4,7 +4,8 @@
 # written by David Whale and Martin O'Hanlon, Wiley, 2017
 # http://eu.wiley.com/WileyCDA/WileyTitle/productCd-1119439582.html
 #
-# This program sets off an explosion when you touch a banana connected to your micro:bit
+# This program sets off an explosion when you touch a banana connected
+# to your micro:bit
 # NOTE: You can also use an orange, if you don't have a banana handy
 
 # Import necessary modules
@@ -45,7 +46,7 @@ while True:
         pos = mc.player.getTilePos()
         bomb(pos.x, pos.y, pos.z)
     else:
-        # Put something on the micro:bit display so you know it is still working
+        # Put something on the display so you know it is still working
         microbit.display.show('?')
 
 # END

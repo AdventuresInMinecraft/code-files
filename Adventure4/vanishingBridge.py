@@ -30,7 +30,8 @@ def buildBridge():
   b = mc.getBlock(pos.x, pos.y-1, pos.z)
 
   # Is the player safe?
-  if b == block.AIR.id or b == block.WATER_FLOWING.id or b == block.WATER_STATIONARY.id:
+  if b == block.AIR.id or b == block.WATER_FLOWING.id or \
+    b == block.WATER_STATIONARY.id:
     # Player is unsafe, build a glass block directly under the player
     mc.setBlock(pos.x, pos.y-1, pos.z, block.GLASS.id)
     # Use a second list to remember the three parts of this coordinate
